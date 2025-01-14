@@ -1,9 +1,10 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
+    color:#ffffff;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #000000e5;
 }
 
 /* Header styles */
@@ -13,6 +14,15 @@ header {
     text-align: center;
     padding: 15px 10px;
     display:flex;
+    height:15px;
+}
+
+header .circle{
+    position: absolute;
+    top:10px;
+    z-index:1;
+    height:auto;
+    width:60px;
 }
 
 header ul{
@@ -54,8 +64,21 @@ nav ul li a {
     display: inline-block;
 }
 
-nav ul li a:hover {
-    background-color: #7d21f5;
+nav ul li a:hover::before {
+    transform: scale(1.2, 1.5);
+    border: 1px solid var(--colr-pri);
+    z-index: -1;
+    border-radius: 100px;
+}
+
+main .biglogo {
+    filter: invert(72%) sepia(96%) saturate(846%) hue-rotate(357deg) brightness(100%) contrast(106%);
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust the size of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Section styles */
@@ -82,10 +105,6 @@ main section {
     scrollbar-width: none; /* Hide scrollbar for modern browsers */
 }
 
-.product-track-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-}
-
 
 /* display Items */
 
@@ -94,8 +113,8 @@ main section {
     box-sizing: border-box; /* Include padding and border in width */
     text-align: center;
     margin: 10px;
-    background-color: white; /* Add a white background inside the border */
-    border: 2px solid white; /* White border */
+    background-color: rgba(0, 0, 0, 0.514); /* Add a white background inside the border */
+    border: 2px solid #ffcc00; /* White border */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
     padding: 15px; /* Add internal spacing for content */
