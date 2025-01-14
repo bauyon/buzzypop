@@ -41,9 +41,89 @@ nav ul li a:hover {
 main section {
     margin: 20px auto;
     padding: 20px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
+/* display Container */
+.product {
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* display Track */
+.product-track-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Add spacing between items */
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    overflow-x: scroll; /* Allow horizontal scrolling if needed */
+    scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+.product-track-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+
+/* display Items */
+
+.product-item {
+    max-width: 100%;
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: center;
+    margin: 10px;
+    background-color: white; /* Add a white background inside the border */
+    border: 2px solid white; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    padding: 15px; /* Add internal spacing for content */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}   
+
+.product-item img {
+    border-radius: 10px;
+    max-width: 50%;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 14px;
+}
+
+/* display Buttons */
+.product-track {
+    display: flex;
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+
+.learn {
+    display: inline-block;
+    background-color: #8B0000; /* Dark red color */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.learn:hover {
+    background-color: #B22222; /* Slightly lighter red on hover */
+}
 main section h2 {
     color: #ff6600;
 }
