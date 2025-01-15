@@ -1,28 +1,19 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", sans-serif, Arial;
     color:#ffffff;
     margin: 0;
     padding: 0;
-    background-color: #000000e5;
+    background-color: #131313;
 }
 
 /* Header styles */
 header {
-    background-color: #ffcc00;
-    color: #333;
+    color: #131313;
     text-align: center;
     padding: 15px 10px;
     display:flex;
     height:15px;
-}
-
-header .circle{
-    position: absolute;
-    top:10px;
-    z-index:1;
-    height:auto;
-    width:60px;
 }
 
 header ul{
@@ -32,7 +23,7 @@ header ul{
     margin: 0;
     padding: 0;
     position:flex;
-    
+    filter: brightness(0) saturate(100%) invert(86%) sepia(18%) saturate(6404%) hue-rotate(359deg) brightness(102%) contrast(105%);
 }
 
 header ul li{
@@ -42,18 +33,52 @@ header ul li{
 header ul img {
     width:25px;
 }
+/* testing*/
 
+nav ul li{
+    display: inline-block;
+}
+nav a{
+    text-shadow: 1px 1px #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+    padding: 4px 0;
+    display: inline-block;
+  }
+  .menu-1 a::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
+  }
+  .menu a:hover::before{
+    transform: scale3d(1,1,1);
+  }
+  .menu-1 a::before{
+    background: #ffcc00;
+    transform-origin: 100% 50%;
+  }
+  .menu-1 a:hover::before{
+    transform-origin: 0 50%;
+  }
 /* Navigation bar styles */
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 10px;
     padding: 0;
-    background-color: #ffcc00;
     text-align:center;
-}
-
-nav ul li {
-    display: inline-block;
 }
 
 nav ul li a {
@@ -64,31 +89,141 @@ nav ul li a {
     display: inline-block;
 }
 
-nav ul li a:hover::before {
-    transform: scale(1.2, 1.5);
-    border: 1px solid var(--colr-pri);
-    z-index: -1;
-    border-radius: 100px;
-}
-
 main .biglogo {
     filter: invert(72%) sepia(96%) saturate(846%) hue-rotate(357deg) brightness(100%) contrast(106%);
     position:relative;
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Adjust the size of the logo as needed */
+    transition: transform 0.2s ease-in-out;
+    width: 100%; /* Let it adjust to the width of its container */
     height: auto; /* Maintain aspect ratio */
+}
+main #logo{
+    text-align: center;
+    align-content:center;
+    font-size: 30px;
+
+}
+
+main .biglogo:hover{
+    transform: scale(1.05);
+}
+
+/*black wave*/
+.spacer {
+    aspect-ratio: 960/200;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.layer1 {
+    background-image:url('./layer1.svg');
+}
+
+.layer2 {
+    background-image:url('./layer2.svg');
+}
+.layer3{
+    background-image:url('./layer3.svg');
+}
+.layer4{
+    background-image:url('./layer4.svg');
+}
+.layer5{
+    background-image:url('./layer5.svg');
 }
 
 /* Section styles */
 main section {
+    position:relative;
+    margin: 0px auto;
+    padding: 20px;
+    max-width: 100%;
+    min-height:400px;
+}
+
+main .logocontent{
     margin: 20px auto;
     padding: 20px;
     max-width: 1000px;
+    height:960px;
 }
 
+
+
+main .abtcontent{
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    font-size:25px;
+    color: #030300;
+}
+
+main .productcontent{
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    height:960px;
+    
+}
+
+main .contactcontent {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    height:960px;
+}
+
+
+main #about{
+    background-color: #ffcc00;
+    text-align: center;
+    align-content:center;
+}
+
+main #about .circle{
+    width:300px;
+}
+
+/*Fruity Loco Buzz*/
+
+main #fruity{
+    background-color:#D23A8A;
+}
+main .fruitycontent{
+    text-align: center;
+    align-content:center;
+    font-size: 30px;
+    text-shadow: 1px 1px #000000;
+}
+main .fruitycontent img{
+    height:540px;
+    width:300px;
+}
+
+/*Cinnamon Toasted Buzz*/
+
+main #cinnamon{
+    background-color:#F3E8AF;
+}
+main .cinnamoncontent{
+    text-shadow: 1px 1px #000000;
+    text-align: center;
+    align-content:center;
+    font-size: 30px;
+}
+main .cinnamoncontent img{
+    width:300px;
+}
+
+
 /* display Container */
+
+main #products{
+    background-color:#806600;
+}
 .product {
     position: relative;
     max-width: 1000px;
@@ -104,9 +239,6 @@ main section {
     overflow-x: scroll; /* Allow horizontal scrolling if needed */
     scrollbar-width: none; /* Hide scrollbar for modern browsers */
 }
-
-
-/* display Items */
 
 .product-item {
     max-width: 100%;
@@ -148,24 +280,8 @@ main section {
     margin: 0; /* Removes default margin */
 }
 
-
-.learn {
-    display: inline-block;
-    background-color: #8B0000; /* Dark red color */
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.learn:hover {
-    background-color: #B22222; /* Slightly lighter red on hover */
-}
 main section h2 {
-    color: #ff6600;
+    color: #ffffff;
 }
 
 /* Footer styles */
