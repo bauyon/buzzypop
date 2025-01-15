@@ -1,2 +1,2 @@
 # buzzypop
-just launch website for buzzy pop
+just a launch website for buzzy pop
