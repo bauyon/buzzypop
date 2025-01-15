@@ -1,2 +1,2 @@
 # buzzypop
-Mostly just web development for buzzy pop
+just launch website for buzzy pop
