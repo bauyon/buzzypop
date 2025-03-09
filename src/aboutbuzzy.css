@@ -106,6 +106,9 @@ main #logo{
 
 }
 
+
+
+
 main .biglogo:hover{
     transform: scale(1.05);
 }
@@ -181,6 +184,48 @@ main #about{
     background-color: #ffcc00;
     text-align: center;
     align-content:center;
+}
+
+/*About Area*/
+.buzzy-container{
+    width: 1000px;
+    transform: translate(-50%, -50%);
+    position:static;
+    align-items: center;
+    margin-top: 40%;
+    margin-left: 50%;
+    overflow: hidden;
+    border: 20px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 10px 25px 30px black;
+}
+
+.buzzy-wrapper{
+    width:500px;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+.buzzy-wrapper img{
+    width:1000px;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-400%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 main #about .circle{
